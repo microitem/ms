@@ -1,5 +1,8 @@
 # BEGIN WordPress
-
+# Inštrukcie (riadky) medzi “BEGIN WordPress” a “END WordPress” sú
+# dynamicky generované a mali by byť upravené iba pomocou filtrov WordPress.
+# Akékoľvek zmeny inštrukcií medzi týmito značkami budú prepísané.
+<IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 RewriteBase /
@@ -7,5 +10,6 @@ RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
+</IfModule>
 
-# END WordPress.
+# END WordPress

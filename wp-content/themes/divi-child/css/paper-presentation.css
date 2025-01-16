@@ -1,0 +1,1198 @@
+/* Základné štýly */
+.paper-presentation {
+    max-width: 1920px;
+    width: 100%;
+    padding: 40px;
+    margin: 0 auto;
+    background: transparent !important;
+    color: #fff !important;
+    position: relative;
+    overflow: hidden;
+    min-height: 800px;
+}
+
+/* Navigácia */
+.teacher-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.teacher-controls button {
+    padding: 20px 40px;
+    border: none;
+    border-radius: 5px;
+    background: #4CAF50;
+    color: white;
+    min-width: 160px;
+    font-size: 24px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.teacher-controls button:hover {
+    background: #45a049;
+}
+
+.slide-counter {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff !important;
+    flex: 1;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* Slidy */
+.slides-container {
+    position: relative;
+    min-height: 600px;
+}
+
+.slide {
+    opacity: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.slide.active {
+    opacity: 1;
+    display: block;
+}
+
+/* Slide 1 */
+#slide-1 .content-wrapper {
+    display: flex;
+    gap: 60px;
+    height: 100%;
+}
+
+#slide-1 .left-content {
+    flex: 1;
+    max-width: 60%;
+}
+
+#slide-1 .right-content {
+    flex: 0 0 35%;
+    padding-top: 50px;
+}
+
+.comic-strip {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.comic-image {
+    width: calc(33.333% - 14px);
+    height: auto;
+    object-fit: contain;
+}
+
+/* Nadpisy */
+.paper-presentation h1 {
+    font-size: 72px !important;
+    color: #fff !important;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.paper-presentation h2 {
+    font-size: 48px !important;
+    color: #fff !important;
+    margin: 0 0 30px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* Ovládacie prvky */
+.controls-text {
+    font-size: 36px !important;
+    color: #fff !important;
+    margin: 30px 0;
+}
+
+.playback-controls {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+    background: transparent !important;
+}
+
+.playback-controls button {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 22px;
+    min-width: 300px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.play-btn { background-color: #4CAF50; color: white; }
+.stop-btn { background-color: #f44336; color: white; }
+.pause-btn { background-color: #2196F3; color: white; }
+
+/* Tlačidlá */
+.audio-control-btn,
+.birds-control-btn,
+.engine-control-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    padding: 30px 25px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 28px;
+    height: 50px;
+    min-width: 180px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.audio-control-btn:hover,
+.birds-control-btn:hover,
+.engine-control-btn:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
+
+.audio-control-btn.playing,
+.birds-control-btn.active,
+.engine-control-btn.stop {
+    background: #f44336;
+}
+
+/* Les */
+.forest-scene {
+    position: relative;
+    width: 100%;
+    margin: 40px 0;
+    padding: 20px 0;
+    min-height: 500px;
+}
+
+.forest-images {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.forest-scene-image {
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+}
+
+/* Slnko */
+.sun-element {
+    position: absolute;
+    top: 150px;
+    left: 15px;
+    width: 160px;
+    z-index: 1;
+}
+
+.sun-image {
+    width: 100%;
+    height: auto;
+    animation: shine 6s ease-in-out infinite;
+    transform-origin: center center;
+    will-change: transform;
+}
+
+@keyframes shine {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    75% { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* Otázky */
+.questions {
+    padding: 20px;
+    background: transparent !important;
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    margin-top: 40px;
+}
+
+.paper-presentation .questions p {
+    font-size: 36px !important;
+    color: #fff !important;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    line-height: 0.4;
+    margin-bottom: 20px;
+}
+
+/* Drevorubač */
+.logger-scene {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logger-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.saw-image {
+    position: absolute;
+    right: 100px;
+    top: 76%;
+    transform: translateY(-50%);
+    width: 540px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.saw-image:hover {
+    transform: translateY(-50%) scale(1.05);
+}
+
+.saw-image.active {
+    animation: sawShake 0.5s ease-in-out infinite;
+}
+
+/* Nákladné auto */
+.truck-scene {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+    min-height: 600px;
+	height: 1080px;
+    overflow: visible;
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.truck-image {
+    position: absolute;
+    top: 57%;
+    right: -100%;
+    transform: translateY(-50%);
+    width: 1200px;
+    height: auto;
+    transition: right 5s ease-in-out;
+    z-index: 2;
+}
+
+.truck-image.active {
+    right: 46%;
+    transform: translate(50%, -50%);
+}
+
+/* Dym */
+.smoke-container {
+    position: absolute;
+    right: 22%;
+    top: 72%;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.smoke {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: rgba(200, 200, 200, 0.8);
+    border-radius: 50%;
+    opacity: 0;
+    display: none;
+}
+
+.smoke.active {
+    display: block;
+    animation: smokeRise 2s infinite;
+}
+
+.smoke:nth-child(2) { animation-delay: 0.4s; }
+.smoke:nth-child(3) { animation-delay: 0.8s; }
+
+/* Pätička */
+.slide-footer {
+    position: relative;
+    z-index: 3;
+    margin-top: 20px;
+}
+
+.slide-footer p {
+    font-size: 36px !important;
+    color: #fff !important;
+    margin: 15px 0 !important;
+    line-height: 0.4;
+}
+
+/* Animácie */
+@keyframes sawShake {
+    0% { transform: translateY(-50%) rotate(0deg); }
+    25% { transform: translateY(-50%) rotate(2deg); }
+    75% { transform: translateY(-50%) rotate(-2deg); }
+    100% { transform: translateY(-50%) rotate(0deg); }
+}
+
+@keyframes smokeRise {
+    0% {
+        transform: translate(10%, -100%) scale(1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate(10%, -300%) scale(3);
+        opacity: 0;
+    }
+}
+
+/* Vylepšenia */
+* {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+button:active,
+.audio-control-btn:active,
+.birds-control-btn:active,
+.engine-control-btn:active {
+    transform: scale(0.98);
+}
+
+/* Gradient pozadie */
+.gradient-bg {
+    background: linear-gradient(178deg, #f47905 50%, #d95900 100%);
+    min-height: 800px;
+    padding: 40px;
+    position: relative;
+}
+
+/* Smejko scéna */
+.smiley-scene {
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.smiley-image {
+    max-width: 400px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.smiley-image:hover {
+    transform: scale(1.05);
+}
+
+.video-container {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+}
+
+.video-container.active {
+    display: block;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.back-to-smiley {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 15px 30px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.back-to-smiley:hover {
+    background: #45a049;
+}
+/* Slider 6 */
+.factory-bg {
+    background: linear-gradient(180deg, #fff7e6 0%, #fffcf3 100%);
+    min-height: 800px;
+    padding: 40px;
+    position: relative;
+}
+
+#slide-6 h2 {
+    color: #009933 !important;
+    font-size: 48px !important;
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: 1.3;
+}
+
+.factory-scene {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 500px;
+    margin: 40px 0;
+}
+
+.paper-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+	margin-top: 500px;
+}
+
+.factory-center {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.notebooks-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.factory-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.paper-image, 
+.notebook-image,
+.notebook-single {
+    max-width: 400px;
+    height: auto;
+}
+
+#slide-6 .slide-footer p {
+    color: #009933 !important;
+    font-size: 36px !important;
+    text-align: center;
+    line-height: 1.4;
+}
+
+/* Animácie */
+.floating {
+    animation: float 3s ease-in-out infinite;
+}
+
+.floating-delayed {
+    animation: float 3s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Slider 7 základné nastavenia */
+#slide-7 .content-wrapper {
+    background: linear-gradient(180deg, #f5d0a0 0%, #e8c399 100%);
+    padding: 40px;
+    min-height: 800px;
+    position: relative;
+}
+
+#slide-7 .text-container {
+    margin-bottom: 40px;
+}
+
+#slide-7 h2 {
+    color: #FFD700 !important;
+    font-size: 36px !important;
+    text-align: left;
+    margin-bottom: 20px;
+    line-height: 1.3;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Hlavná scéna */
+.scene-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+.machine-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.tree-section {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.paper-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Obrázky */
+.side-image {
+    max-width: 250px;
+    height: auto;
+}
+
+.center-image {
+    max-width: 400px;
+    height: auto;
+}
+
+/* Footer */
+#slide-7 .slide-footer {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#slide-7 .slide-footer p {
+    color: #FF0000 !important;
+    font-size: 36px !important;
+    line-height: 1.4;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Animácia pre strom */
+.animated {
+    animation: treeSwing 4s ease-in-out infinite;
+    transform-origin: bottom center;
+}
+
+@keyframes treeSwing {
+    0% { transform: scale(1) rotate(0deg); }
+    25% { transform: scale(1.02) rotate(-1deg); }
+    50% { transform: scale(1.02) rotate(0deg); }
+    75% { transform: scale(1.02) rotate(1deg); }
+    100% { transform: scale(1) rotate(0deg); }
+}
+
+/* Responzívne nastavenia */
+@media (max-width: 1024px) {
+    .center-image {
+        max-width: 300px;
+    }
+    
+    .side-image {
+        max-width: 200px;
+    }
+    
+    #slide-7 h2 {
+        font-size: 30px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .scene-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .center-image {
+        max-width: 250px;
+    }
+    
+    .side-image {
+        max-width: 150px;
+    }
+}
+
+/* Slider 8 */
+#slide-8 .content-wrapper {
+    background: linear-gradient(180deg, #ffeedd 0%, #ffddcc 100%);
+    padding: 40px;
+    min-height: 800px;
+    position: relative;
+}
+
+#slide-8 .text-container {
+    margin-bottom: 40px;
+}
+
+#slide-8 h2 {
+    color: #8B4513 !important;
+    font-size: 48px !important;
+    margin-bottom: 20px;
+    line-height: 1.3;
+    text-align: left;
+}
+
+/* Hlavná scéna */
+.recycle-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin: 40px auto;
+}
+
+.recycle-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.recycle-image {
+    max-width: 600px;
+    height: auto;
+}
+
+.paper-items {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 100px;
+    margin-top: 20px;
+}
+
+.paper-item {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Footer */
+#slide-8 .slide-footer {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#slide-8 .slide-footer p {
+    color: #8B4513 !important;
+    font-size: 36px !important;
+    line-height: 1.4;
+    font-weight: bold;
+}
+
+/* Animácie */
+.floating {
+    animation: float 3s ease-in-out infinite;
+}
+
+.floating-delay-1 {
+    animation: float 3s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+/* Responzívne nastavenia */
+@media (max-width: 1024px) {
+    #slide-8 h2 {
+        font-size: 36px !important;
+    }
+
+    .recycle-image {
+        max-width: 450px;
+    }
+    
+    .paper-items {
+        padding: 0 50px;
+    }
+    
+    .paper-item {
+        max-width: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    #slide-8 h2 {
+        font-size: 30px !important;
+    }
+
+    .recycle-image {
+        max-width: 300px;
+    }
+    
+    .paper-items {
+        padding: 0 20px;
+    }
+    
+    .paper-item {
+        max-width: 100px;
+    }
+
+    #slide-8 .slide-footer p {
+        font-size: 30px !important;
+    }
+}
+
+/* Slider 9 základné nastavenia */
+#slide-9 .content-wrapper {
+    background: linear-gradient(180deg, #ffeedd 0%, #ffddcc 100%);
+    padding: 40px;
+    min-height: 800px;
+    position: relative;
+}
+
+/* Hlavička */
+#slide-9 h2 {
+    color: #4A90E2 !important;
+    font-size: 48px !important;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+/* Container pre kroky */
+.recycle-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Text krokov */
+.steps-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.step {
+    color: #333;
+    font-size: 32px !important;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.step strong {
+    color: #4A90E2;
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+/* Grid pre obrázky procesu */
+.process-image {
+    position: relative;
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Jednotlivé obrázky procesu */
+.process {
+    max-width: 200px;
+    height: auto;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.process:hover {
+    transform: scale(1.05);
+}
+
+/* Šípky medzi procesmi */
+.process:not(:last-child)::after {
+    content: '→';
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: #4A90E2;
+    font-weight: bold;
+    z-index: 2;
+}
+
+/* Spodný text */
+#slide-9 .slide-footer {
+    margin-top: 60px;
+    text-align: center;
+}
+
+#slide-9 .slide-footer p {
+    color: #4A90E2 !important;
+    font-size: 36px !important;
+    line-height: 1.4;
+    font-weight: bold;
+}
+
+/* Responzívne nastavenia */
+@media (max-width: 1400px) {
+    .process {
+        max-width: 180px;
+    }
+}
+
+@media (max-width: 1024px) {
+    #slide-9 h2 {
+        font-size: 36px !important;
+    }
+
+    .step {
+        font-size: 28px !important;
+    }
+
+    .process {
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    #slide-9 h2 {
+        font-size: 30px !important;
+    }
+
+    .step {
+        font-size: 24px !important;
+    }
+
+    .process {
+        max-width: 120px;
+    }
+
+    .process:not(:last-child)::after {
+        font-size: 24px;
+        right: -25px;
+    }
+
+    #slide-9 .slide-footer p {
+        font-size: 30px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .process-image {
+        flex-direction: column;
+    }
+
+    .process {
+        max-width: 150px;
+    }
+
+    .process:not(:last-child)::after {
+        content: '↓';
+        right: auto;
+        top: auto;
+        bottom: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+/* Slider 10 */
+#slide-10 .content-wrapper {
+    background: linear-gradient(180deg, #ffffff 0%, #e6ffe6 100%);
+    padding: 40px;
+    min-height: 800px;
+    position: relative;
+}
+
+#slide-10 h2 {
+    color: #4CAF50 !important;
+    font-size: 48px !important;
+    margin-bottom: 60px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Hlavná scéna */
+.save-tree-scene {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    margin: 40px 0;
+    min-height: 400px;
+}
+
+.flowers {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-tree {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.tree-image {
+    max-height: 400px;
+    width: auto;
+}
+
+.flowers-image {
+    max-width: 300px;
+    height: auto;
+}
+
+/* Footer */
+#slide-10 .slide-footer {
+    text-align: center;
+    margin-top: 60px;
+}
+
+#slide-10 .slide-footer p {
+    color: #4CAF50 !important;
+    font-size: 36px !important;
+    line-height: 1.5;
+    font-weight: bold;
+}
+
+/* Animácie */
+.floating {
+    animation: float 4s ease-in-out infinite;
+}
+
+.floating-delayed {
+    animation: float 4s ease-in-out infinite;
+    animation-delay: 2s;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+/* Responzívne nastavenia */
+@media (max-width: 1024px) {
+    #slide-10 h2 {
+        font-size: 36px !important;
+    }
+    
+    .tree-image {
+        max-height: 300px;
+    }
+    
+    .flowers-image {
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .save-tree-scene {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .flowers-image {
+        max-width: 150px;
+    }
+    
+    #slide-10 .slide-footer p {
+        font-size: 30px !important;
+    }
+}
+/* Slider 11 - základné nastavenia */
+.paper-presentation #slide-11 .content-wrapper {
+    background: linear-gradient(180deg, #fff6cc 0%, #ffeb99 100%);
+    padding: 40px;
+    min-height: 800px;
+    position: relative;
+    width: 100%;
+}
+
+/* Nadpisy */
+.paper-presentation .title-container {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+.paper-presentation #slide-11 h2 {
+    color: #FF6B00;
+    font-size: 48px;
+    margin-bottom: 20px;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.paper-presentation #slide-11 h3 {
+    color: #FF6B00;
+    font-size: 36px;
+    margin-bottom: 40px;
+    line-height: 1.3;
+    text-align: center;
+}
+
+/* Container pre produkty */
+.paper-presentation .paper-products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    min-height: 600px;
+}
+
+/* Jednotlivé produkty */
+.paper-presentation .product {
+    width: calc(25% - 30px);
+    max-width: 300px;
+    height: auto;
+    margin: 0;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+    transition-property: visibility, opacity, transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    cursor: pointer;
+}
+
+.paper-presentation .product.visible {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+.paper-presentation .product:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+.paper-presentation #slide-11 .slide-footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.paper-presentation #slide-11 .slide-footer p {
+    color: #FF6B00;
+    font-size: 36px;
+    line-height: 1.4;
+    font-weight: bold;
+}
+
+/* Responzívne nastavenia */
+@media screen and (max-width: 1400px) {
+    .paper-presentation .paper-products {
+        max-width: 1200px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .paper-presentation .product {
+        width: calc(25% - 25px);
+        max-width: 250px;
+    }
+    .paper-presentation #slide-11 h2 {
+        font-size: 42px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .paper-presentation .product {
+        width: calc(33.333% - 25px);
+        max-width: 200px;
+    }
+    .paper-presentation #slide-11 h2 {
+        font-size: 36px;
+    }
+    .paper-presentation #slide-11 h3 {
+        font-size: 30px;
+    }
+    .paper-presentation .paper-products {
+        gap: 25px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .paper-presentation .paper-products {
+        gap: 20px;
+    }
+    .paper-presentation .product {
+        width: calc(50% - 20px);
+        max-width: 180px;
+    }
+    .paper-presentation #slide-11 h2 {
+        font-size: 30px;
+    }
+    .paper-presentation #slide-11 h3 {
+        font-size: 24px;
+    }
+    .paper-presentation #slide-11 .slide-footer p {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .paper-presentation .paper-products {
+        gap: 15px;
+        padding: 10px;
+    }
+    .paper-presentation .product {
+        width: calc(50% - 15px);
+        max-width: 150px;
+    }
+    .paper-presentation #slide-11 .slide-footer p {
+        font-size: 24px;
+    }
+}
